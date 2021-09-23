@@ -6,8 +6,8 @@ import (
 )
 
 func (a app) JSON(status int, val interface{}, w http.ResponseWriter) {
-	w.WriteHeader(status)
 	w.Header().Add("Content-Type", "application/json")
+	w.WriteHeader(status)
 
 	_ = json.NewEncoder(w).Encode(val)
 }
