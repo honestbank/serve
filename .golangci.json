@@ -4,6 +4,9 @@
         "skip-files": [
             "graph"
         ],
+        "skip-dirs": [
+            ".*/generated/*"
+        ],
         "skip-dirs-use-default": true,
         "tests": true
     },

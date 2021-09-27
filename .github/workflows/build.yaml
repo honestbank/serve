@@ -37,7 +37,7 @@ jobs:
           skip-build-cache: true
 
       - name: Test and generate code coverage
-        run: go test -v -race -coverprofile=coverage.txt -covermode=atomic ./...
+        run: go test -v -race --tags=integration_test -coverprofile=coverage.txt -covermode=atomic ./...
 
       - name: sonarcloud-scan
         uses: sonarsource/sonarcloud-github-action@master
