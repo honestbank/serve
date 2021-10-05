@@ -7,8 +7,8 @@ type GlobalConfig struct {
 	PrometheusPushGatewayURL string `env:"CONFIG__PROMETHEUS_PUSH_GATEWAY_URL" required:"true"`
 }
 
-func Load(cfg interface{}) error {
+func Load(cfg interface{}, files ...string) error {
 	return configor.
 		New(&configor.Config{AutoReload: false, Silent: true}).
-		Load(cfg)
+		Load(cfg, files...)
 }
