@@ -6,11 +6,11 @@ import (
 	"github.com/honestbank/serve/config"
 )
 
-func New(cfg interface{}, loggerFactory LoggerFactory) (App, error) {
-	if err := config.Load(cfg); err != nil {
+func New(cfg interface{}, loggerFactory LoggerFactory, configFileList ...string) (App, error) {
+	if err := config.Load(cfg, configFileList...); err != nil {
 		return nil, err
 	}
-	globalCfg, err := globalConfig()
+	globalCfg, err := globalConfig(configFileList...)
 	if err != nil {
 		return nil, err
 	}
@@ -31,9 +31,9 @@ func MustNew(cfg interface{}, loggerFactory LoggerFactory) App {
 	return application
 }
 
-func globalConfig() (*config.GlobalConfig, error) {
+func globalConfig(files ...string) (*config.GlobalConfig, error) {
 	cfg := &config.GlobalConfig{}
-	err := config.Load(cfg)
+	err := config.Load(cfg, files...)
 	if err != nil {
 		return nil, err
 	}
