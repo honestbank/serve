@@ -22,8 +22,8 @@ func New(cfg interface{}, loggerFactory LoggerFactory, configFileList ...string)
 	}, nil
 }
 
-func MustNew(cfg interface{}, loggerFactory LoggerFactory) App {
-	application, err := New(cfg, loggerFactory)
+func MustNew(cfg interface{}, loggerFactory LoggerFactory, configFileList ...string) App {
+	application, err := New(cfg, loggerFactory, configFileList...)
 	if err != nil {
 		panic(err)
 	}
