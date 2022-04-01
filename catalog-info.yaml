@@ -4,9 +4,9 @@ kind: Component
 metadata:
   name: serve
   description: provides an easy way to serve up external traffic for proxy like services
-    annotations:
-      github.com/project-slug: honestbank/serve
-      sonarqube.org/project-key: honestbank_serve
+  annotations:
+    github.com/project-slug: honestbank/serve
+    sonarqube.org/project-key: honestbank_serve
 spec:
   type: library
   lifecycle: prod
