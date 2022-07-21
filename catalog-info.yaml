@@ -10,8 +10,7 @@ metadata:
   tags:
     - golang
     - restful
-    - user:cyberhck
 spec:
   type: library
   lifecycle: production
-  owner: "spend-squad"
+  owner: group:spend-squad
