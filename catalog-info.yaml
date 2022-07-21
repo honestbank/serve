@@ -8,8 +8,8 @@ metadata:
     github.com/project-slug: honestbank/serve
     sonarqube.org/project-key: honestbank_serve
   tags:
-    - golang
-    - restful
+    - language:golang
+    - api:openapi
 spec:
   type: library
   lifecycle: production
