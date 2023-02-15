@@ -6,7 +6,7 @@ require (
 	github.com/BurntSushi/toml v0.4.1 // indirect
 	github.com/gorilla/mux v1.8.0
 	github.com/jinzhu/configor v1.2.1
-	github.com/prometheus/client_golang v1.11.0
+	github.com/prometheus/client_golang v1.11.1
 	github.com/stretchr/testify v1.7.0
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
